@@ -104,18 +104,6 @@ A: Binaries are platform-dependent and unnecessarily bloat the repository.
 Q: What happens if the buffer provided to getcwd() is too small?
 A: It returns NULL and sets errno to ERANGE.
 
-🚀 Future Roadmap
-
- Implement ls functionality using opendir() and readdir().
-
- Add support for piping (|) between commands.
-
- Implement custom signal handling for SIGINT.
-
-Developed as a deep dive into Linux systems programming, focusing on performance, memory efficiency, and deterministic behavior.
-
-
----
 
 If you want, I can also create a **slightly more “modern GitHub-ready” version** with **badges, code highlighting, and collapsible sections** so it looks super polished for open-source.  
 
