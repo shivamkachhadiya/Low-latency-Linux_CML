@@ -7,4 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(linux_cml
     src/main.cpp
+    src/shell.cpp
 )
+
+target_include_directories(linux_cml PRIVATE include)
