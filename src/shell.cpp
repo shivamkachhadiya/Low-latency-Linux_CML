@@ -1,35 +1,5 @@
-#include "shell.hpp"
-#include <iostream>
-#include <unistd.h>
-#include <cerrno>
-#include <limits.h>
+#include "include.hpp"
 using namespace std;
-
-void Shell::printWorkingDirectory(){
-    char buffer[PATH_MAX];
-    if(getcwd(buffer,sizeof(buffer))!=nullptr){
-        cout<<buffer<<endl;
-    }else{
-        perror("getcwd");
-    }
-}
-
-void Shell::printHelp(){
-    cout<<"commands:\n";
-    cout<<"pwd - print directory\n";
-    cout<<"help -show help\n";
-    cout<<"quit -quit shell\n";
-}
-
-
-void Shell::changeDirectory(const string& path){
-    if(chdir(path.c_str())!=0){
-        perror("cd");
-    }
-}
-
-
-
 void Shell::run(){
     string command,arg;
     while(true){
@@ -46,6 +16,8 @@ void Shell::run(){
         }
         else if(command=="exit"){
             break;
+        }else if(command=="ls"){
+            listDirectory();
         }else{
             cout<<"unknown command \n";
         }

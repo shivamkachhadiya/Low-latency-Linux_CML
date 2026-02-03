@@ -9,4 +9,5 @@ private:
     void printWorkingDirectory();
     void printHelp();
     void changeDirectory(const string& path);
+    void listDirectory();
 };
