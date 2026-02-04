@@ -1,4 +1,17 @@
+# build
 build/
-.vscode/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+
+# binaries
 *.o
 *.out
+*.exe
+linux_cml
+
+# vscode
+.vscode/
+
+# cmake temp
+cmake_install.cmake
