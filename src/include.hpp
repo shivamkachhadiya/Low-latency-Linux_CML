@@ -8,3 +8,4 @@
 #include "commands/listDirectory.hpp"
 #include "commands/printWorkingDirectory.hpp"
 #include "commands/printHelp.hpp"
+#include "commands/stateFile.hpp"

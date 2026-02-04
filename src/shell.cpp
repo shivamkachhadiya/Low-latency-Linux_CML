@@ -18,6 +18,10 @@ void Shell::run(){
             break;
         }else if(command=="ls"){
             listDirectory();
+        }else if(command=="stat"){
+            string file;
+            cin>>file;
+            stateFile(file);
         }else{
             cout<<"unknown command \n";
         }

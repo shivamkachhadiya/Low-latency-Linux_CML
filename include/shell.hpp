@@ -10,4 +10,5 @@ private:
     void printHelp();
     void changeDirectory(const string& path);
     void listDirectory();
+    void stateFile(const string& path);
 };
