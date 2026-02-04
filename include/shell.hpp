@@ -1,6 +1,8 @@
 #pragma once
+
 #include <string>
-using namespace std;
+#include <vector>
+
 class Shell {
 public:
     void run();
@@ -8,7 +10,8 @@ public:
 private:
     void printWorkingDirectory();
     void printHelp();
-    void changeDirectory(const string& path);
+    void changeDirectory(const std::string& path);
     void listDirectory();
-    void stateFile(const string& path);
+    void stateFile(const std::string& path);
+    void echo(const std::vector<std::string>& args);
 };

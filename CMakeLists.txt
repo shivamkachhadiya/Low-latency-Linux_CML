@@ -8,6 +8,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(linux_cml
     src/main.cpp
     src/shell.cpp
+    src/commands/changeDirectory.cpp
+    src/commands/listDirectory.cpp
+    src/commands/printWorkingDirectory.cpp
+    src/commands/printHelp.cpp
+    src/commands/stateFile.cpp
+    src/commands/echo.cpp
 )
 
 target_include_directories(linux_cml PRIVATE include)
+
