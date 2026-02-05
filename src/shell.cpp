@@ -1,26 +1,26 @@
 #include "shell.hpp"
 #include <iostream>
 #include <sstream>
-
+using namespace std;
 void Shell::run() {
-    std::string line;
+    string line;
 
     while(true) {
-        std::cout << "LINUX_CML> ";
+        cout << "LINUX_CML> ";
 
-        std::getline(std::cin, line);
+        getline(cin, line);
         if(line.empty()) continue;
 
-        std::stringstream ss(line);
-        std::vector<std::string> tokens;
-        std::string temp;
+        stringstream ss(line);
+        vector<string> tokens;
+        string temp;
 
         while(ss >> temp){
             tokens.push_back(temp);
         }
 
-        std::string command = tokens[0];
-        std::vector<std::string> args(tokens.begin()+1, tokens.end());
+        string command = tokens[0];
+        vector<string> args(tokens.begin()+1, tokens.end());
 
         if(command == "pwd") printWorkingDirectory();
         else if(command == "help") printHelp();
@@ -28,7 +28,13 @@ void Shell::run() {
         else if(command == "ls") listDirectory();
         else if(command == "stat" && !args.empty()) stateFile(args[0]);
         else if(command == "echo") echo(args);
+        else if(command == "mkdir") {
+            if(!args.empty())
+                makeDirectory(args[0]);
+        }
+
         else if(command == "exit") break;
-        else std::cout << "unknown command\n";
+
+        else cout << "unknown command\n";
     }
 }

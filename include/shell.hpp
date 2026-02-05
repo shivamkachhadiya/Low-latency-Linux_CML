@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-
+using namespace std;
 class Shell {
 public:
     void run();
@@ -14,4 +14,5 @@ private:
     void listDirectory();
     void stateFile(const std::string& path);
     void echo(const std::vector<std::string>& args);
+    void makeDirectory(const std::string& path);
 };

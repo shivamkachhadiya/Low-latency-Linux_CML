@@ -14,6 +14,7 @@ add_executable(linux_cml
     src/commands/printHelp.cpp
     src/commands/stateFile.cpp
     src/commands/echo.cpp
+    src/commands/mkdir.cpp
 )
 
 target_include_directories(linux_cml PRIVATE include)
