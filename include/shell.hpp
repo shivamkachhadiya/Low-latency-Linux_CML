@@ -13,6 +13,12 @@ private:
     void changeDirectory(const std::string& path);
     void listDirectory();
     void stateFile(const std::string& path);
+    void catFile(const string& path);
     void echo(const std::vector<std::string>& args);
     void makeDirectory(const std::string& path);
+    void copyFile(const std::string& src, const std::string& dest);
+    void removeFile(const std::string& path);
+    void touchFile(const std::string& filename);
+
+
 };

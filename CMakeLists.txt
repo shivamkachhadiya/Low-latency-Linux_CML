@@ -13,8 +13,14 @@ add_executable(linux_cml
     src/commands/printWorkingDirectory.cpp
     src/commands/printHelp.cpp
     src/commands/stateFile.cpp
+    src/commands/catFile.cpp
     src/commands/echo.cpp
     src/commands/mkdir.cpp
+    src/commands/copyFile.cpp
+    src/commands/touch.cpp
+
+    src/commands/removeFile.cpp
+
 )
 
 target_include_directories(linux_cml PRIVATE include)

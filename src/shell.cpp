@@ -28,11 +28,21 @@ void Shell::run() {
         else if(command == "ls") listDirectory();
         else if(command == "stat" && !args.empty()) stateFile(args[0]);
         else if(command == "echo") echo(args);
+        else if(command == "cat") catFile(args[0]);
         else if(command == "mkdir") {
             if(!args.empty())
                 makeDirectory(args[0]);
         }
+        else if(command ==  "touch")touchFile(args[0]);
 
+        else if(command == "rm") removeFile(args[0]);
+        else if(command == "cp"){
+            if(args.size()==2){
+                copyFile(args[0],args[1]);
+            }else{
+                cout<<"usage : cp <src> <dest> \n";
+            }
+        }
         else if(command == "exit") break;
 
         else cout << "unknown command\n";

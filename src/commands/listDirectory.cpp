@@ -44,7 +44,7 @@ void Shell::listDirectory(){
     struct dirent* entry;
 
     while((entry = readdir(dir)) != nullptr){
-        std::cout << entry->d_name << " ";
+        std::cout << entry->d_name << " "<<endl;
     }
 
     std::cout << "\n";
