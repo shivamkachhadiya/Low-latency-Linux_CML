@@ -18,6 +18,8 @@ add_executable(linux_cml
     src/commands/mkdir.cpp
     src/commands/copyFile.cpp
     src/commands/touch.cpp
+    src/commands/history.cpp
+    src/commands/executeExternal.cpp
 
     src/commands/removeFile.cpp
 

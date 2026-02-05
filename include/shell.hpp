@@ -19,6 +19,9 @@ private:
     void copyFile(const std::string& src, const std::string& dest);
     void removeFile(const std::string& path);
     void touchFile(const std::string& filename);
+    vector<string>historyList;
+    void showHistory();
+    void execCommand(const vector<string>&args);
 
 
 };

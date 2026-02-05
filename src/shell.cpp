@@ -9,6 +9,7 @@ void Shell::run() {
         cout << "LINUX_CML> ";
 
         getline(cin, line);
+        historyList.push_back(line);
         if(line.empty()) continue;
 
         stringstream ss(line);
@@ -43,8 +44,11 @@ void Shell::run() {
                 cout<<"usage : cp <src> <dest> \n";
             }
         }
+        else if(command == "history"){
+            showHistory();
+        }
         else if(command == "exit") break;
 
-        else cout << "unknown command\n";
+        else execCommand(tokens);
     }
 }
